@@ -8,5 +8,5 @@ services:
       - /home/user/docker/minecraft_bedrock/config:/config
       - /home/user/docker/minecraft_bedrock/worlds:/worlds
     ports:
-      - 19132:19132
+      - 19132:19132/udp
     restart: unless-stopped
