@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  minecraft_server:
+    container_name: minecraft_server
+    image: roemer/bedrock-server
+    volumes:
+      - /home/user/docker/minecraft_bedrock/config:/config
+      - /home/user/docker/minecraft_bedrock/worlds:/worlds
+    ports:
+      - 19132:19132/udp
+    restart: unless-stopped
